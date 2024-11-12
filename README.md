@@ -13,3 +13,7 @@ COMO RODAR:
 
 *   python: no terminal entre 'py compress420.py'
 *   c++: no terminal entre './compressor420.exe'
+
+para compilação do código em c++:
+
+*   g++ compressor420.cpp -o compressor420 -std=c++11

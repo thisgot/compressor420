@@ -127,7 +127,9 @@ void pixels_to_image(unsigned char** pixels, unsigned char* image, int width, in
 
 int main() {
     int width, height, channels;
-    unsigned char* image = stbi_load("image.jpg", &width, &height, &channels, 0);
+	char filename[20];
+	cin >> filename;
+    unsigned char* image = stbi_load(filename, &width, &height, &channels, 0);
     
     if (image == nullptr) {
         cerr << "Error loading image!" << endl;
@@ -141,7 +143,7 @@ int main() {
 	create_array(pixels,width*height,3);
 	create_array(decompressed_pixels,width*height,3);
 	
-	//converte para matriz de pixels, junta cada 3 itens (cores) em 1 vetor
+	//converte para matriz de pixels, junta cada 3 cores em 1 vetor
 	image_to_pixels(image,pixels,width,height);
 
 	//converte de vetor rgb para YCrCb
@@ -157,7 +159,7 @@ int main() {
 	pixels_to_image(decompressed_pixels,image,width,height);
 	
 	//salva a imagem que foi comprimida e descomprimida
-	stbi_write_jpg("image_compressed_n_decompressed.jpg", width, height, 3, image, 70);
+	stbi_write_jpg("output", width, height, 3, image, 70);
 	
     stbi_image_free(image);
     free_array(pixels,width*height);
@@ -165,6 +167,7 @@ int main() {
 	delete[] y_channel;
 	delete[] cb_420;
 	delete[] cr_420;
-	system("pause");
+	int temp;
+	cin >> temp;
 	return 0;
 }

@@ -11,7 +11,7 @@ o motivo de se salvar a imagem eh para comparacao da qualidade da imagem que sof
 
 COMO RODAR:
 
-*   python: no terminal entre 'py compress420.py'
+*   python: no terminal entre 'py compress420.py' ou 'python compress420.py'
 *   c++: no terminal entre './compressor420.exe'
 
 para compilação do código em c++:

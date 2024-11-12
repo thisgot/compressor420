@@ -6,9 +6,10 @@ o programa:
 *   descomprime para o formato RGB novamente
 *   salva a imagem como (image_compressed_n_decompressed.png)
 
-nao ha mudanca entre o tamanho das final das duas imagens, a reducao ocorre dentro do programa
+nao ha mudanca entre o tamanho das final das duas imagens, a reducao ocorre dentro do programa,
 o motivo de se salvar a imagem eh para comparacao da qualidade da imagem que sofreu compressão e a orignal
 
 COMO RODAR:
-    python: no terminal entre 'py compress420.py'
-    c++: no terminal entre './compressor420.exe'
+
+python: no terminal entre 'py compress420.py'
+c++: no terminal entre './compressor420.exe'

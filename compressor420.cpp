@@ -128,6 +128,7 @@ void pixels_to_image(unsigned char** pixels, unsigned char* image, int width, in
 int main() {
     int width, height, channels;
 	char filename[20];
+	cout << "nome da imagem: ";
 	cin >> filename;
     unsigned char* image = stbi_load(filename, &width, &height, &channels, 0);
     
@@ -159,7 +160,7 @@ int main() {
 	pixels_to_image(decompressed_pixels,image,width,height);
 	
 	//salva a imagem que foi comprimida e descomprimida
-	stbi_write_jpg("output", width, height, 3, image, 70);
+	stbi_write_jpg("output_c++.jpg", width, height, 3, image, 70);
 	
     stbi_image_free(image);
     free_array(pixels,width*height);
@@ -167,6 +168,7 @@ int main() {
 	delete[] y_channel;
 	delete[] cb_420;
 	delete[] cr_420;
+	cout << "...";
 	int temp;
 	cin >> temp;
 	return 0;

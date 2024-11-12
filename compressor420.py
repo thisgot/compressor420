@@ -76,7 +76,7 @@ def pixels_to_image(pixels, width, height):
     image.putdata(pixels)
     return image
 
-filepath = './image.jpg'
+filepath = input("nome da imagem:");
 
 image = Image.open(filepath)
 width, height = image.size
@@ -94,4 +94,5 @@ decompressed_pixels = decompress420(y_channel, cr_420, cb_420, width, height)
 
 #salva a imagem que foi comprimida e descomprimida
 image = pixels_to_image(decompressed_pixels, width, height)
-image.save("image_compressed_n_decompressed.jpg")
+image.save("output_py.jpg")
+input("...");
